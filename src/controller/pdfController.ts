@@ -21,9 +21,10 @@ class PdfController {
     }
 
     create(req:Request , res:Response){
-        const { content , name} = req.body;
-        generatePDF.handle({content:content , name:name})
-        res.status(201).json({message:"sucesse"})
+        const  content = req.body.content;
+        
+        console.log(name)
+        generatePDF.handle({content:content , name:name})   
     }
 
 }

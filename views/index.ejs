@@ -1,12 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;1,300&family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>PDF</title>
-</head>
-<body>
-    
-</body>
+    <style>
+        
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins";
+      }
+      .body {
+       background-color: rgb(218, 218, 218);
+      }
+      form {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 2rem;
+        border-radius: 0.5rem;
+        width: 20rem;
+        background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;
+        background-blend-mode: multiply,multiply;
+       
+      }
+      form input {
+        width: 100%;
+        padding: 1rem;
+        border: none;
+        margin-top: 1rem;
+        border-radius: 0.3rem;
+      }
+      button {
+        width: 100%;
+        padding: 1rem;
+        margin-top: 1rem;
+        background-color: rgb(181, 16, 16);
+        font-weight: 700;
+        border: none;
+        border-radius: 0.5rem;
+        color: white;
+      }
+      h3 {
+        margin-bottom: 1rem;
+        color: white;
+      }
+    </style>
+  </head>
+  <body class="body">
+    <div>
+      <form action="/" method="post">
+        <h3>Create</h3>
+        <input
+          type="text"
+          name="content"
+          placeholder="enter your content text PDF"
+          class="form-control"
+        /> <input
+        type="text"
+        name="name"
+        placeholder="enter the name PDF"
+        class="form-control"
+      />
+        <br />
+        <button class="btn btn-primary" type="submit">Generate PDF</button>
+      </form>
+    </div>
+  </body>
 </html>
