@@ -8,6 +8,8 @@ const  app = express();
 
 
 app.get('/pdf', (req, res) => {
+
+    generatePDF.handle({content:"welcome"  , name:"text,pdf"})
     
     const filePath = 'C:/Users/PC/Desktop/adão apps/jspdf/PDFs/text.pdf';
     fs.readFile(filePath, (err, data) => {
