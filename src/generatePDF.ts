@@ -7,8 +7,10 @@ interface IRequet  {
     constructor(){
     }
     handle({content , name}:IRequet){
-        const docPDF = new jsPDF();
-        return docPDF.text(content , 10 , 10 );
+        const docPDF = new jsPDF()
+        docPDF.text(content , 10 , 10 );
+        docPDF.save(`PDFs/${name}`)
+        return "sucess"
     }
 }
 
