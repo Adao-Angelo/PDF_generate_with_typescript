@@ -5,9 +5,7 @@ interface IRequet  {
 }
  class GeneratePDF {
     constructor(){
-
     }
-
     handle({content , name}:IRequet){
         const docPDF = new jsPDF();
         return docPDF.text(content , 10 , 10 );
