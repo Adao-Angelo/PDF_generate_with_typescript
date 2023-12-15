@@ -1,13 +1,16 @@
-import express, { request, response } from "express";
+import express, { Request, Response } from "express";
 import { generatePDF } from "./generatePDF";
+import fs from "fs";
+import path from "path"
 
 const port = 2000;
 const  app = express();
 
-app.get("/pdf" , (request , response)=>{    
-    const dt = generatePDF.handle({content:"welcome", name:"text4.pdf"})
-    response.send(dt)
-})
+app.get('/pdf', (req: Request, res: Response) => {
+
+res.send()
+});
+
 
 
 app.listen(port , ()=>{
